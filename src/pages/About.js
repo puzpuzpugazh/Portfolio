@@ -118,7 +118,7 @@ const About = () => {
               </div>
 
               <div className="about-buttons">
-                <a href={require('../assets/PUGAZHENTHI K Resume .pdf')} className="btn btn-primary" download>
+                <a href={require('../assets/PUGAZHENTHI K_RESUME.pdf')} className="btn btn-primary" download>
                   <FaDownload />
                   Download Resume
                 </a>

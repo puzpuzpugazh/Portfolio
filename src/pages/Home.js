@@ -1,14 +1,35 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { FaGithub, FaLinkedin, FaTwitter, FaArrowRight, FaDownload, FaCode, FaLaptop, FaRocket } from 'react-icons/fa';
-import './Home.css';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaArrowRight,
+  FaDownload,
+  FaCode,
+  FaLaptop,
+  FaRocket,
+} from "react-icons/fa";
+import "./Home.css";
 
 const Home = () => {
   const socialLinks = [
-    { icon: <FaGithub />, url: 'https://github.com/puzpuzpugazh', label: 'GitHub' },
-    { icon: <FaLinkedin />, url: 'https://www.linkedin.com/in/pugazhenthi-k-965127247/', label: 'LinkedIn' },
-    { icon: <FaTwitter />, url: 'https://x.com/puzpuzpugazh', label: 'Twitter' },
+    {
+      icon: <FaGithub />,
+      url: "https://github.com/puzpuzpugazh",
+      label: "GitHub",
+    },
+    {
+      icon: <FaLinkedin />,
+      url: "https://www.linkedin.com/in/pugazhenthi-k-965127247/",
+      label: "LinkedIn",
+    },
+    {
+      icon: <FaTwitter />,
+      url: "https://x.com/puzpuzpugazh",
+      label: "Twitter",
+    },
   ];
 
   const containerVariants = {
@@ -46,7 +67,7 @@ const Home = () => {
             animate="visible"
           >
             <motion.div className="hero-text" variants={itemVariants}>
-              <motion.h1 
+              <motion.h1
                 className="hero-title"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -54,7 +75,7 @@ const Home = () => {
               >
                 Hi, I'm <span className="highlight">Pugazhenthi K</span>
               </motion.h1>
-              <motion.h2 
+              <motion.h2
                 className="hero-subtitle"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -62,17 +83,18 @@ const Home = () => {
               >
                 Full Stack Developer
               </motion.h2>
-              <motion.p 
+              <motion.p
                 className="hero-description"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
-                I create beautiful, functional, and user-centered digital experiences. 
-                Passionate about clean code and innovative solutions that make a difference.
+                I create beautiful, functional, and user-centered digital
+                experiences. Passionate about clean code and innovative
+                solutions that make a difference.
               </motion.p>
-              
-              <motion.div 
+
+              <motion.div
                 className="hero-buttons"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -82,14 +104,18 @@ const Home = () => {
                   View My Work
                   <FaArrowRight />
                 </Link>
-                <a href={require('../assets/PUGAZHENTHI K Resume .pdf')} className="btn btn-primary" download>
+                <a
+                  href={require("../assets/PUGAZHENTHI K_RESUME.pdf")}
+                  className="btn btn-primary"
+                  download
+                >
                   <FaDownload />
                   Download Resume
                 </a>
               </motion.div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="hero-avatar"
               variants={itemVariants}
               initial={{ opacity: 0, scale: 0.8 }}
@@ -98,149 +124,176 @@ const Home = () => {
             >
               <div className="avatar-container">
                 {/* Main Avatar Circle */}
-                <motion.div 
+                <motion.div
                   className="avatar-circle"
-                  animate={{ 
+                  animate={{
                     rotate: [0, 360],
-                    scale: [1, 1.05, 1]
+                    scale: [1, 1.05, 1],
                   }}
-                  transition={{ 
+                  transition={{
                     rotate: { duration: 20, repeat: Infinity, ease: "linear" },
-                    scale: { duration: 3, repeat: Infinity, ease: "easeInOut" }
+                    scale: { duration: 3, repeat: Infinity, ease: "easeInOut" },
                   }}
                 >
                   <div className="avatar-face">
                     <div className="avatar-eyes">
-                      <motion.div 
+                      <motion.div
                         className="eye left-eye"
                         animate={{ scaleY: [1, 0.3, 1] }}
-                        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                        }}
                       />
-                      <motion.div 
+                      <motion.div
                         className="eye right-eye"
                         animate={{ scaleY: [1, 0.3, 1] }}
-                        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                          delay: 0.5,
+                        }}
                       />
                     </div>
-                    <motion.div 
+                    <motion.div
                       className="avatar-smile"
                       animate={{ scaleX: [1, 1.2, 1] }}
-                      transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                      transition={{
+                        duration: 3,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
                     />
                   </div>
                 </motion.div>
 
                 {/* Floating Code Elements */}
-                <motion.div 
+                <motion.div
                   className="floating-element code-element"
-                  animate={{ 
+                  animate={{
                     y: [-20, 20, -20],
-                    rotate: [0, 180, 360]
+                    rotate: [0, 180, 360],
                   }}
-                  transition={{ 
+                  transition={{
                     y: { duration: 4, repeat: Infinity, ease: "easeInOut" },
-                    rotate: { duration: 8, repeat: Infinity, ease: "linear" }
+                    rotate: { duration: 8, repeat: Infinity, ease: "linear" },
                   }}
                 >
                   <FaCode />
                 </motion.div>
 
-                <motion.div 
+                <motion.div
                   className="floating-element laptop-element"
-                  animate={{ 
+                  animate={{
                     y: [20, -20, 20],
-                    rotate: [0, -180, -360]
+                    rotate: [0, -180, -360],
                   }}
-                  transition={{ 
+                  transition={{
                     y: { duration: 5, repeat: Infinity, ease: "easeInOut" },
-                    rotate: { duration: 10, repeat: Infinity, ease: "linear" }
+                    rotate: { duration: 10, repeat: Infinity, ease: "linear" },
                   }}
                 >
                   <FaLaptop />
                 </motion.div>
 
-                <motion.div 
+                <motion.div
                   className="floating-element rocket-element"
-                  animate={{ 
+                  animate={{
                     y: [-15, 15, -15],
-                    rotate: [0, 90, 180, 270, 360]
+                    rotate: [0, 90, 180, 270, 360],
                   }}
-                  transition={{ 
+                  transition={{
                     y: { duration: 6, repeat: Infinity, ease: "easeInOut" },
-                    rotate: { duration: 12, repeat: Infinity, ease: "linear" }
+                    rotate: { duration: 12, repeat: Infinity, ease: "linear" },
                   }}
                 >
                   <FaRocket />
                 </motion.div>
 
                 {/* Animated Rings */}
-                <motion.div 
+                <motion.div
                   className="ring ring-1"
-                  animate={{ 
+                  animate={{
                     rotate: [0, 360],
-                    scale: [1, 1.1, 1]
+                    scale: [1, 1.1, 1],
                   }}
-                  transition={{ 
+                  transition={{
                     rotate: { duration: 15, repeat: Infinity, ease: "linear" },
-                    scale: { duration: 4, repeat: Infinity, ease: "easeInOut" }
+                    scale: { duration: 4, repeat: Infinity, ease: "easeInOut" },
                   }}
                 />
-                <motion.div 
+                <motion.div
                   className="ring ring-2"
-                  animate={{ 
+                  animate={{
                     rotate: [360, 0],
-                    scale: [1, 0.9, 1]
+                    scale: [1, 0.9, 1],
                   }}
-                  transition={{ 
+                  transition={{
                     rotate: { duration: 20, repeat: Infinity, ease: "linear" },
-                    scale: { duration: 5, repeat: Infinity, ease: "easeInOut" }
+                    scale: { duration: 5, repeat: Infinity, ease: "easeInOut" },
                   }}
                 />
-                <motion.div 
+                <motion.div
                   className="ring ring-3"
-                  animate={{ 
+                  animate={{
                     rotate: [0, -360],
-                    scale: [1, 1.2, 1]
+                    scale: [1, 1.2, 1],
                   }}
-                  transition={{ 
+                  transition={{
                     rotate: { duration: 25, repeat: Infinity, ease: "linear" },
-                    scale: { duration: 6, repeat: Infinity, ease: "easeInOut" }
+                    scale: { duration: 6, repeat: Infinity, ease: "easeInOut" },
                   }}
                 />
 
                 {/* Particle Effects */}
-                <motion.div 
+                <motion.div
                   className="particle particle-1"
-                  animate={{ 
+                  animate={{
                     x: [0, 30, 0],
                     y: [0, -30, 0],
-                    opacity: [0, 1, 0]
+                    opacity: [0, 1, 0],
                   }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
                 />
-                <motion.div 
+                <motion.div
                   className="particle particle-2"
-                  animate={{ 
+                  animate={{
                     x: [0, -25, 0],
                     y: [0, 25, 0],
-                    opacity: [0, 1, 0]
+                    opacity: [0, 1, 0],
                   }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 1,
+                  }}
                 />
-                <motion.div 
+                <motion.div
                   className="particle particle-3"
-                  animate={{ 
+                  animate={{
                     x: [0, 20, 0],
                     y: [0, 20, 0],
-                    opacity: [0, 1, 0]
+                    opacity: [0, 1, 0],
                   }}
-                  transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+                  transition={{
+                    duration: 3.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 2,
+                  }}
                 />
               </div>
             </motion.div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="social-links"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -271,7 +324,7 @@ const Home = () => {
       <section className="about-preview">
         <div className="container">
           <div className="grid grid-2">
-            <motion.div 
+            <motion.div
               className="about-content"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -280,10 +333,11 @@ const Home = () => {
             >
               <h2>About Me</h2>
               <p>
-                I'm a passionate developer with 1+ years of experience building web applications. 
-                I specialize in React, Node.js, and modern web technologies. When I'm not coding, 
-                you can find me exploring new technologies, contributing to open source, or 
-                sharing knowledge with the developer community.
+                I'm a passionate developer with 1+ years of experience building
+                web applications. I specialize in React, Node.js, and modern web
+                technologies. When I'm not coding, you can find me exploring new
+                technologies, contributing to open source, or sharing knowledge
+                with the developer community.
               </p>
               <Link to="/about" className="btn btn-primary">
                 Learn More
@@ -291,7 +345,7 @@ const Home = () => {
               </Link>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="stats"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -322,4 +376,4 @@ const Home = () => {
   );
 };
 
-export default Home; 
+export default Home;

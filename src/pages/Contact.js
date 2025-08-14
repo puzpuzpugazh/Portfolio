@@ -1,14 +1,22 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedin, FaTwitter, FaPaperPlane } from 'react-icons/fa';
-import './Contact.css';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaPaperPlane,
+} from "react-icons/fa";
+import "./Contact.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -17,50 +25,50 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: <FaEnvelope />,
-      title: 'Email',
-      value: 'pugazhenthi.kamalakkannan@gmail.com',
-      link: 'mailto:pugazhenthi.kamalakkannan@gmail.com'
+      title: "Email",
+      value: "pugazhenthi.kamalakkannan@gmail.com",
+      link: "mailto:pugazhenthi.kamalakkannan@gmail.com",
     },
     {
       icon: <FaPhone />,
-      title: 'Phone',
-      value: '+918610288572',
-      link: 'tel:+918610288572'
+      title: "Phone",
+      value: "+918610288572",
+      link: "tel:+918610288572",
     },
     {
       icon: <FaMapMarkerAlt />,
-      title: 'Location',
-      value: 'Chennai, IN',
-      link: null
-    }
+      title: "Location",
+      value: "Chennai, IN",
+      link: null,
+    },
   ];
 
   const socialLinks = [
     {
       icon: <FaGithub />,
-      name: 'GitHub',
-      url: 'https://github.com/puzpuzpugazh',
-      color: '#333'
+      name: "GitHub",
+      url: "https://github.com/puzpuzpugazh",
+      color: "#333",
     },
     {
       icon: <FaLinkedin />,
-      name: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/pugazhenthi-k-965127247/',
-      color: '#0077b5'
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/pugazhenthi-k-965127247/",
+      color: "#0077b5",
     },
     {
       icon: <FaTwitter />,
-      name: 'Twitter',
-      url: 'https://x.com/puzpuzpugazh',
-      color: '#1da1f2'
-    }
+      name: "Twitter",
+      url: "https://x.com/puzpuzpugazh",
+      color: "#1da1f2",
+    },
   ];
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -71,25 +79,25 @@ const Contact = () => {
 
     try {
       // Option 1: Formspree (Recommended for simplicity)
-      const response = await fetch('https://formspree.io/f/meozlplk', {
-        method: 'POST',
+      const response = await fetch("https://formspree.io/f/meozlplk", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
           subject: formData.subject,
           message: formData.message,
-          _replyto: formData.email
+          _replyto: formData.email,
         }),
       });
 
       if (response.ok) {
-        setSubmitStatus('success');
-        setFormData({ name: '', email: '', subject: '', message: '' });
+        setSubmitStatus("success");
+        setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
-        throw new Error('Failed to send email');
+        throw new Error("Failed to send email");
       }
 
       // Option 2: EmailJS (Alternative - uncomment and configure if preferred)
@@ -119,10 +127,9 @@ const Contact = () => {
         throw new Error('Failed to send email');
       }
       */
-
     } catch (error) {
-      console.error('Email sending failed:', error);
-      setSubmitStatus('error');
+      console.error("Email sending failed:", error);
+      setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
     }
@@ -133,9 +140,9 @@ const Contact = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
@@ -144,23 +151,23 @@ const Contact = () => {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.6
-      }
-    }
+        duration: 0.6,
+      },
+    },
   };
 
   return (
     <div className="contact">
       <div className="container">
         {/* Hero Section */}
-        <motion.section 
+        <motion.section
           className="contact-hero"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <div className="contact-hero-content">
-            <motion.h1 
+            <motion.h1
               className="contact-title"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -168,7 +175,7 @@ const Contact = () => {
             >
               Get In Touch
             </motion.h1>
-            <motion.p 
+            <motion.p
               className="contact-subtitle"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -180,7 +187,7 @@ const Contact = () => {
         </motion.section>
 
         {/* Contact Content */}
-        <motion.section 
+        <motion.section
           className="contact-content"
           variants={containerVariants}
           initial="hidden"
@@ -188,7 +195,7 @@ const Contact = () => {
         >
           <div className="contact-grid">
             {/* Contact Form */}
-            <motion.div 
+            <motion.div
               className="contact-form-section"
               variants={itemVariants}
             >
@@ -273,26 +280,32 @@ const Contact = () => {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                   >
-                    {submitStatus === 'success' ? (
-                      <p style={{color:'black'}}>✅ Message sent successfully! I'll get back to you soon.</p>
+                    {submitStatus === "success" ? (
+                      <p style={{ color: "black" }}>
+                        ✅ Message sent successfully! I'll get back to you soon.
+                      </p>
                     ) : (
-                      <p style={{color:'black'}}>❌ Something went wrong. Please try again.</p>
+                      <p style={{ color: "black" }}>
+                        ❌ Something went wrong. Please try again.
+                      </p>
                     )}
                   </motion.div>
                 )}
 
                 {/* Toast auto-dismiss logic */}
-                {submitStatus && (() => {
-                  setTimeout(() => {
-                    if (typeof setSubmitStatus === 'function') setSubmitStatus(null);
-                  }, 3000);
-                  return null;
-                })()}
+                {submitStatus &&
+                  (() => {
+                    setTimeout(() => {
+                      if (typeof setSubmitStatus === "function")
+                        setSubmitStatus(null);
+                    }, 3000);
+                    return null;
+                  })()}
               </form>
             </motion.div>
 
             {/* Contact Info */}
-            <motion.div 
+            <motion.div
               className="contact-info-section"
               variants={itemVariants}
             >
@@ -310,13 +323,20 @@ const Contact = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
                   >
-                    <div className="info-icon">
-                      {info.icon}
-                    </div>
+                    <div className="info-icon">{info.icon}</div>
                     <div className="info-content">
                       <h3>{info.title}</h3>
                       {info.link ? (
-                        <a href={info.link} target={info.link.startsWith('mailto:') || info.link.startsWith('tel:') ? '_self' : '_blank'} rel="noopener noreferrer">
+                        <a
+                          href={info.link}
+                          target={
+                            info.link.startsWith("mailto:") ||
+                            info.link.startsWith("tel:")
+                              ? "_self"
+                              : "_blank"
+                          }
+                          rel="noopener noreferrer"
+                        >
                           {info.value}
                         </a>
                       ) : (
@@ -337,7 +357,7 @@ const Contact = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="social-link"
-                      style={{ '--social-color': social.color }}
+                      style={{ "--social-color": social.color }}
                       whileHover={{ scale: 1.1, y: -3 }}
                       whileTap={{ scale: 0.95 }}
                       initial={{ opacity: 0, y: 20 }}
@@ -355,7 +375,7 @@ const Contact = () => {
         </motion.section>
 
         {/* CTA Section */}
-        <motion.section 
+        <motion.section
           className="contact-cta"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -366,11 +386,18 @@ const Contact = () => {
             <h2>Ready to Start Your Project?</h2>
             <p>Let's work together to create something amazing</p>
             <div className="cta-buttons">
-              <a href="mailto:pugazhenthi.kamalakkannan@gmail.com" className="btn btn-primary">
+              <a
+                href="mailto:pugazhenthi.kamalakkannan@gmail.com"
+                className="btn btn-primary"
+              >
                 <FaEnvelope />
                 Send Email
               </a>
-              <a href={require('../assets/PUGAZHENTHI K Resume .pdf')} className="btn btn-primary" download>
+              <a
+                href={require("../assets/PUGAZHENTHI K_RESUME.pdf")}
+                className="btn btn-primary"
+                download
+              >
                 Download Resume
               </a>
             </div>
@@ -381,4 +408,4 @@ const Contact = () => {
   );
 };
 
-export default Contact; 
+export default Contact;
