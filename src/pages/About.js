@@ -19,6 +19,11 @@ const About = () => {
 
   const experience = [
     {
+      year: 'present',
+      title: 'Freelancer',
+      description: 'Working as a freelancer and building web applications using React, Node.js, express and MongoDB.'
+    },
+    {
       year: '2024 - 2025',
       title: 'Front-End Developer',
       company: 'TVM INFOTECH',
@@ -223,7 +228,7 @@ const About = () => {
                 <div className="timeline-content">
                   <div className="timeline-year">{exp.year}</div>
                   <h3>{exp.title}</h3>
-                  <h4>{exp.company}</h4>
+                  <h4>{exp?.company || ''}</h4>
                   <p>{exp.description}</p>
                 </div>
               </motion.div>

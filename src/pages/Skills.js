@@ -13,9 +13,9 @@ const Skills = () => {
       icon: <FaLaptop />,
       skills: [
         { name: 'React', level: 95, experience: '1+ years' },
-        { name: 'JavaScript', level: 90, experience: '1+ years' },
+        { name: 'JavaScript', level: 90, experience: '2+ years' },
         { name: 'TypeScript', level: 85, experience: '1+ years' },
-        { name: 'HTML/CSS', level: 95, experience: '1+ years' },
+        { name: 'HTML/CSS', level: 95, experience: '2+ years' },
         { name: 'Tailwind CSS', level: 90, experience: '1+ years' },
         { name: 'Bootstrap', level: 90, experience: '1+ years' },
         // { name: 'Next.js', level: 80, experience: '1+ years' }
@@ -64,10 +64,10 @@ const Skills = () => {
       name: 'Tools & Others',
       icon: <FaTools />,
       skills: [
-        { name: 'Git', level: 90, experience: '1+ years' },
-        { name: 'GitHub', level: 95, experience: '1+ years' },
-        { name: 'VS Code', level: 95, experience: '1+ years' },
-        { name: 'Figma', level: 75, experience: '1+ years' },
+        { name: 'Git', level: 90, experience: '2+ years' },
+        { name: 'GitHub', level: 95, experience: '2+ years' },
+        { name: 'VS Code', level: 95, experience: '2+ years' },
+        { name: 'Figma', level: 90, experience: '1+ years' },
         { name: 'Postman', level: 85, experience: '1+ years' },
         // { name: 'Jest', level: 80, experience: '1+ years' }
       ]
