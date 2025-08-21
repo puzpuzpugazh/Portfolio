@@ -45,8 +45,8 @@ const Projects = () => {
       image: "🌤️",
       category: "frontend",
       technologies: ["React", "OpenWeather API", "Chart.js", "CSS3"],
-      github: "https://github.com/puzpuzpugazh",
-      live: "https://demo.com",
+      github: "https://github.com/puzpuzpugazh/weatherDashboard",
+      live: "https://weatherdashboard-rocc.netlify.app/",
       featured: false,
     },
     {
