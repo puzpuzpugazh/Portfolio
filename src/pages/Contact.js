@@ -394,7 +394,7 @@ const Contact = () => {
                 Send Email
               </a>
               <a
-                href={require("../assets/PUGAZHENTHI K_RESUME.pdf")}
+                href={require("../assets/Pugazhenthi_K Resume 004.pdf")}
                 className="btn btn-primary"
                 download
               >

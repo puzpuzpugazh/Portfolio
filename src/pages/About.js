@@ -16,12 +16,26 @@ const About = () => {
     { name: "Angular", level: 80 },
     { name: "HTML", level: 95 },
     { name: "CSS", level: 90 },
+    { name: "Bootstrap", level: 80 },
     { name: "JavaScript", level: 95 },
+    { name: "TypeScript", level: 90 },
+    { name: "MySQL", level: 85 },
     { name: "MongoDB", level: 85 },
+    { name: "Java", level: 85 },
     { name: "Node.js", level: 85 },
     { name: "Express", level: 85 },
     { name: "Git", level: 90 },
-    { name: "Bootstrap", level: 80 },
+    { name: "GitHub", level: 90 },
+    { name: "Jira", level: 90 },
+    { name: "CI/CD", level: 90 },
+    { name: "SDLC", level: 90 },
+    { name: "STLC", level: 90 },
+    { name: "Agile Methodologies ", level: 90 },
+    { name: "Manual Testing", level: 90 },
+    { name: "Automation Testing", level: 90 },
+    { name: "Selenium", level: 90 },
+    { name: "JUnit", level: 90 },
+    { name: "TestNG", level: 90 },
   ];
 
   const experience = [
@@ -139,7 +153,7 @@ const About = () => {
 
               <div className="about-buttons">
                 <a
-                  href={require("../assets/PUGAZHENTHI K_RESUME.pdf")}
+                  href={require("../assets/Pugazhenthi_K Resume 004.pdf")}
                   className="btn btn-primary"
                   download
                 >

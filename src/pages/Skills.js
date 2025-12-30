@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaCode, FaLaptop, FaDatabase, FaTools, FaMobile, FaServer } from 'react-icons/fa';
+import { FaCode, FaLaptop, FaDatabase, FaTools, FaMobile, FaServer,FaPenFancy } from 'react-icons/fa';
 import './Skills.css';
 
 const Skills = () => {
@@ -26,6 +26,7 @@ const Skills = () => {
       name: 'Backend Development',
       icon: <FaServer />,
       skills: [
+        { name: 'Java', level: 85, experience: '1+ years' },
         { name: 'Node.js', level: 85, experience: '1+ years' },
         { name: 'Express.js', level: 90, experience: '1+ years' },
         // { name: 'Python', level: 80, experience: '1+ years' },
@@ -60,6 +61,19 @@ const Skills = () => {
       ]
     },
     {
+      id: 'QAT',
+      name: 'QA Testing',
+      icon: <FaPenFancy />,
+      skills: [
+        { name: 'Selenium', level: 90, experience: '1+ years' },
+        { name: 'Java', level: 95, experience: '1+ years' },
+        { name: 'Junit', level: 95, experience: '1+ years' },
+        { name: 'TestNG', level: 90, experience: '1+ years' },
+        { name: 'POM', level: 95, experience: '1+ years' },
+        // { name: 'Jest', level: 80, experience: '1+ years' }
+      ]
+    },
+    {
       id: 'tools',
       name: 'Tools & Others',
       icon: <FaTools />,
@@ -69,9 +83,10 @@ const Skills = () => {
         { name: 'VS Code', level: 95, experience: '2+ years' },
         { name: 'Figma', level: 90, experience: '1+ years' },
         { name: 'Postman', level: 85, experience: '1+ years' },
+        { name: 'JMeter', level: 80, experience: '1+ years' },
         // { name: 'Jest', level: 80, experience: '1+ years' }
       ]
-    }
+    },
   ];
 
   const currentCategory = skillCategories.find(cat => cat.id === activeCategory);

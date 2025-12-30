@@ -6,6 +6,7 @@ import {
   FaCode,
   FaLaptop,
   FaMobile,
+  FaPenFancy,
 } from "react-icons/fa";
 import "./Projects.css";
 
@@ -49,30 +50,30 @@ const Projects = () => {
       live: "https://weatherdashboard-rocc.netlify.app/",
       featured: false,
     },
-    {
-      id: 4,
-      title: "Blog Platform",
-      description:
-        "A modern blog platform with markdown support, SEO optimization, and admin dashboard for content management.",
-      image: "📝",
-      category: "fullstack",
-      technologies: ["Next.js", "PostgreSQL", "Prisma", "Vercel"],
-      github: "https://github.com/puzpuzpugazh",
-      live: "https://demo.com",
-      featured: false,
-    },
-    {
-      id: 5,
-      title: "Mobile Fitness App",
-      description:
-        "A React Native fitness tracking app with workout plans, progress tracking, and social features.",
-      image: "💪",
-      category: "mobile",
-      technologies: ["React Native", "Expo", "Firebase", "Redux"],
-      github: "https://github.com/puzpuzpugazh",
-      live: "https://demo.com",
-      featured: true,
-    },
+    // {
+    //   id: 4,
+    //   title: "Blog Platform",
+    //   description:
+    //     "A modern blog platform with markdown support, SEO optimization, and admin dashboard for content management.",
+    //   image: "📝",
+    //   category: "fullstack",
+    //   technologies: ["Next.js", "PostgreSQL", "Prisma", "Vercel"],
+    //   github: "https://github.com/puzpuzpugazh",
+    //   live: "https://demo.com",
+    //   featured: false,
+    // },
+    // {
+    //   id: 5,
+    //   title: "Mobile Fitness App",
+    //   description:
+    //     "A React Native fitness tracking app with workout plans, progress tracking, and social features.",
+    //   image: "💪",
+    //   category: "mobile",
+    //   technologies: ["React Native", "Expo", "Firebase", "Redux"],
+    //   github: "https://github.com/puzpuzpugazh",
+    //   live: "https://demo.com",
+    //   featured: true,
+    // },
     {
       id: 6,
       title: "Portfolio Website",
@@ -82,7 +83,19 @@ const Projects = () => {
       category: "frontend",
       technologies: ["React", "Framer Motion", "CSS3", "Vercel"],
       github: "https://github.com/puzpuzpugazh",
-      live: "https://demo.com",
+      live: "https://puzpuzpugazh.github.io/Portfolio/",
+      featured: false,
+    },
+    {
+      id: 7,
+      title: "Genshin Impact",
+      description:
+        "A responsive Gaming website tested with modern Testing tools and technologies with both Manual and Automation.",
+      image: "🧪",
+      category: "QA Testing",
+      technologies: ["Selenium", "Java", "JUnit", "TestNG", "POM"],
+      github: "https://github.com/puzpuzpugazh/Genshin.hoyoverse",
+      live: "https://genshin.hoyoverse.com/en/",
       featured: false,
     },
   ];
@@ -92,6 +105,7 @@ const Projects = () => {
     { id: "frontend", label: "Frontend", icon: <FaLaptop /> },
     { id: "fullstack", label: "Full Stack", icon: <FaCode /> },
     { id: "mobile", label: "Mobile", icon: <FaMobile /> },
+    { id: "QA Testing", label: "QA Testing", icon: <FaPenFancy /> },
   ];
 
   const filteredProjects =

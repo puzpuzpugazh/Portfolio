@@ -105,7 +105,7 @@ const Home = () => {
                   <FaArrowRight />
                 </Link>
                 <a
-                  href={require("../assets/PUGAZHENTHI K_RESUME.pdf")}
+                  href={require("../assets/Pugazhenthi_K Resume 004.pdf")}
                   className="btn btn-primary"
                   download
                 >
@@ -361,7 +361,7 @@ const Home = () => {
                 <p>Years Experience</p>
               </div>
               <div className="stat-item">
-                <h3>1+</h3>
+                <h3>5+</h3>
                 <p>Happy Clients</p>
               </div>
               <div className="stat-item">
