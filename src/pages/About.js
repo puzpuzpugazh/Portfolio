@@ -153,7 +153,7 @@ const About = () => {
 
               <div className="about-buttons">
                 <a
-                  href={require("../assets/Pugazhenthi_K Resume 004.pdf")}
+                  href={require("../assets/Pugazhenthi_K Resume 002c.pdf")}
                   className="btn btn-primary"
                   download
                 >
